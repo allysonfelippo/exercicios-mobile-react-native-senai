@@ -1,48 +1,46 @@
-import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
-import FontAwesome5 from '@expo/vector-icons/FontAwesome5'
+import { View, StyleSheet, Text, TextInput, Pressable } from "react-native";
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
-const ConsumoVeiculo = () => {
+const CalculoIMC = () => {
     return (
-        <View style={estilos.container}>
+        <View>
             <View style={
                 {
                     alignSelf: 'center',
                     paddingBottom: 24,
                     paddingTop: 16
                 }}>
-                <FontAwesome5 name='car' size={56} color='red' />
+                <MaterialIcons name="balance" size={56} color="grey" />
             </View>
+
             <View style={estilos.caixaCampoTexto}>
-                <Text>Distância(Km)</Text>
+                <Text>Altura(m)</Text>
                 <TextInput
-                    label='Distância(Km)'
                     style={estilos.campoTexto}
                     inputMode="numeric"
                 />
             </View>
             <View style={estilos.caixaCampoTexto}>
-                <Text>Quantidade de combustível(litros)</Text>
+                <Text>Peso(Kg)</Text>
                 <TextInput
-                    label='Quantidade de combustível(litros)'
                     style={estilos.campoTexto}
-                    inputMode="numeric" />
+                    inputMode="numeric"
+                />
             </View>
+
             <View style={{
                 paddingHorizontal: 8,
                 paddingVertical: 16
             }}>
                 <Pressable style={{
-                    backgroundColor: 'red',
+                    backgroundColor: 'grey',
                     height: 50,
-                    borderRadius: 45,
-                    display: 'flex',
+                    borderTopLeftRadius: 50,
+                    borderBottomRightRadius: 50,
                     alignItems: 'center',
                     justifyContent: 'center'
                 }}>
-                    <Text style={{
-                        color: 'white'
-                    }}>Calcular
-                    </Text>
+                    <Text style={{ color: 'white' }}>Calcular</Text>
                 </Pressable>
             </View>
 
@@ -54,7 +52,7 @@ const ConsumoVeiculo = () => {
                 paddingLeft: 8
             }}>Resultado: </Text>
         </View>
-    )
+    );
 };
 
 const estilos = StyleSheet.create({
@@ -72,4 +70,4 @@ const estilos = StyleSheet.create({
     }
 });
 
-export default ConsumoVeiculo;
+export default CalculoIMC;

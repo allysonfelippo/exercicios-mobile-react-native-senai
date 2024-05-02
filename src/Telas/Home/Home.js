@@ -62,7 +62,7 @@ const estilos = StyleSheet.create({
         paddingLeft: 16
     },
     botao7: {
-        backgroundColor: 'gray',
+        backgroundColor: 'grey',
         height: 50,
         borderTopLeftRadius: 50,
         borderBottomRightRadius: 50,
@@ -88,22 +88,22 @@ const Home = (props) => {
             <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_CONSUMO_VEICULO)} style={estilos.botao1}>
                 <Text style={{ color: '#fff' }}>Média Consumo Veículo</Text>
             </Pressable>
-            <Pressable style={estilos.botao2}>
+            <Pressable  onPress={() => props.navigation.navigate(TELAS.TELA_CONVERSOR_DE_MOEDA)} style={estilos.botao2}>
                 <Text style={{ color: '#fff' }}>Conversor de moeda</Text>
             </Pressable>
-            <Pressable style={estilos.botao3}>
+            <Pressable  onPress={() => props.navigation.navigate(TELAS.TELA_CONVERSOR_DE_MEDIDAS)} style={estilos.botao3}>
                 <Text style={{ color: '#fff' }}>Conversor de medidas</Text>
             </Pressable>
-            <Pressable style={estilos.botao4}>
+            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_CALCULAR_MEDIA_NOTAS)} style={estilos.botao4}>
                 <Text>Calcular média de notas</Text>
             </Pressable>
-            <Pressable style={estilos.botao5}>
+            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_CALCULADORA)} style={estilos.botao5}>
                 <Text style={{ color: '#fff' }}>Calculadora</Text>
             </Pressable>
-            <Pressable style={estilos.botao6}>
+            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_REAJUSTE_SALARIAL)} style={estilos.botao6}>
                 <Text>Calcular reajuste salarial</Text>
             </Pressable>
-            <Pressable style={estilos.botao7}>
+            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_CALCULO_IMC)} style={estilos.botao7}>
                 <Text style={{ color: '#fff' }}>Cálculo IMC</Text>
             </Pressable>
         </View>

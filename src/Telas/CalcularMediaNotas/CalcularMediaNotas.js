@@ -1,7 +1,7 @@
-import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
-import FontAwesome5 from '@expo/vector-icons/FontAwesome5'
+import { View, Pressable, Text, TextInput, StyleSheet } from 'react-native';
+import Feather from '@expo/vector-icons/Feather';
 
-const ConsumoVeiculo = () => {
+const CalcularMediaNotas = () => {
     return (
         <View style={estilos.container}>
             <View style={
@@ -10,20 +10,24 @@ const ConsumoVeiculo = () => {
                     paddingBottom: 24,
                     paddingTop: 16
                 }}>
-                <FontAwesome5 name='car' size={56} color='red' />
+                <Feather name='file-text' size={56} color='yellow' />
             </View>
             <View style={estilos.caixaCampoTexto}>
-                <Text>Distância(Km)</Text>
+                <Text>AV1</Text>
                 <TextInput
-                    label='Distância(Km)'
                     style={estilos.campoTexto}
                     inputMode="numeric"
                 />
             </View>
             <View style={estilos.caixaCampoTexto}>
-                <Text>Quantidade de combustível(litros)</Text>
+                <Text>AV2</Text>
                 <TextInput
-                    label='Quantidade de combustível(litros)'
+                    style={estilos.campoTexto}
+                    inputMode="numeric" />
+            </View>
+            <View style={estilos.caixaCampoTexto}>
+                <Text>Nota SA</Text>
+                <TextInput
                     style={estilos.campoTexto}
                     inputMode="numeric" />
             </View>
@@ -32,15 +36,17 @@ const ConsumoVeiculo = () => {
                 paddingVertical: 16
             }}>
                 <Pressable style={{
-                    backgroundColor: 'red',
+                    backgroundColor: 'yellow',
                     height: 50,
-                    borderRadius: 45,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
+                    borderRadius: 12,
+                    border: 'dotted',
+                    borderColor: 'black',
+                    alignItems: 'flex-end',
+                    justifyContent: 'center',
+                    paddingRight: 8
                 }}>
                     <Text style={{
-                        color: 'white'
+                        color: 'black'
                     }}>Calcular
                     </Text>
                 </Pressable>
@@ -72,4 +78,4 @@ const estilos = StyleSheet.create({
     }
 });
 
-export default ConsumoVeiculo;
+export default CalcularMediaNotas;
