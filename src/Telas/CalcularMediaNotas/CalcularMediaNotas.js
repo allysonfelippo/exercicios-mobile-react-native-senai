@@ -1,5 +1,7 @@
 import { View, Pressable, Text, TextInput, StyleSheet } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
+import { homeEstilos } from '../Home/Home';
+import ESTILOS from '../../Comum/EstilosVariados/EstilosVariados';
 
 const CalcularMediaNotas = () => {
     return (
@@ -35,30 +37,12 @@ const CalcularMediaNotas = () => {
                 paddingHorizontal: 8,
                 paddingVertical: 16
             }}>
-                <Pressable style={{
-                    backgroundColor: 'yellow',
-                    height: 50,
-                    borderRadius: 12,
-                    border: 'dotted',
-                    borderColor: 'black',
-                    alignItems: 'flex-end',
-                    justifyContent: 'center',
-                    paddingRight: 8
-                }}>
-                    <Text style={{
-                        color: 'black'
-                    }}>Calcular
-                    </Text>
+                <Pressable style={homeEstilos.botao4}>
+                    <Text>Calcular</Text>
                 </Pressable>
             </View>
 
-            <Text style={{
-                fontFamily: 'sans-serif-medium',
-                fontWeight: 'bold',
-                fontSize: 24,
-                paddingTop: 16,
-                paddingLeft: 8
-            }}>Resultado: </Text>
+            <Text style={ESTILOS.ESTILO_TEXTO_RESULTADO}>Resultado: </Text>
         </View>
     )
 };

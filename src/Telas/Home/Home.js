@@ -3,7 +3,7 @@ import TELAS from "../../Comum/telas";
 import FontAwesome from '@expo/vector-icons/FontAwesome'
 
 
-const estilos = StyleSheet.create({
+export const homeEstilos = StyleSheet.create({
     container: {
         flex: 1,
         padding: 16,
@@ -73,7 +73,7 @@ const estilos = StyleSheet.create({
 
 const Home = (props) => {
     return (
-        <View style={estilos.container}>
+        <View style={homeEstilos.container}>
             <View style={
                 {
                     display: 'flex',
@@ -85,25 +85,25 @@ const Home = (props) => {
                 <Text style={{ fontSize: 32, paddingBottom: 8 }}>Bem Vindo!</Text>
                 <FontAwesome name='smile-o' size={32} color={'#aef055'}/>
             </View>
-            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_CONSUMO_VEICULO)} style={estilos.botao1}>
+            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_CONSUMO_VEICULO)} style={homeEstilos.botao1}>
                 <Text style={{ color: '#fff' }}>Média Consumo Veículo</Text>
             </Pressable>
-            <Pressable  onPress={() => props.navigation.navigate(TELAS.TELA_CONVERSOR_DE_MOEDA)} style={estilos.botao2}>
+            <Pressable  onPress={() => props.navigation.navigate(TELAS.TELA_CONVERSOR_DE_MOEDA)} style={homeEstilos.botao2}>
                 <Text style={{ color: '#fff' }}>Conversor de moeda</Text>
             </Pressable>
-            <Pressable  onPress={() => props.navigation.navigate(TELAS.TELA_CONVERSOR_DE_MEDIDAS)} style={estilos.botao3}>
+            <Pressable  onPress={() => props.navigation.navigate(TELAS.TELA_CONVERSOR_DE_MEDIDAS)} style={homeEstilos.botao3}>
                 <Text style={{ color: '#fff' }}>Conversor de medidas</Text>
             </Pressable>
-            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_CALCULAR_MEDIA_NOTAS)} style={estilos.botao4}>
+            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_CALCULAR_MEDIA_NOTAS)} style={homeEstilos.botao4}>
                 <Text>Calcular média de notas</Text>
             </Pressable>
-            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_CALCULADORA)} style={estilos.botao5}>
+            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_CALCULADORA)} style={homeEstilos.botao5}>
                 <Text style={{ color: '#fff' }}>Calculadora</Text>
             </Pressable>
-            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_REAJUSTE_SALARIAL)} style={estilos.botao6}>
+            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_REAJUSTE_SALARIAL)} style={homeEstilos.botao6}>
                 <Text>Calcular reajuste salarial</Text>
             </Pressable>
-            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_CALCULO_IMC)} style={estilos.botao7}>
+            <Pressable onPress={() => props.navigation.navigate(TELAS.TELA_CALCULO_IMC)} style={homeEstilos.botao7}>
                 <Text style={{ color: '#fff' }}>Cálculo IMC</Text>
             </Pressable>
         </View>
