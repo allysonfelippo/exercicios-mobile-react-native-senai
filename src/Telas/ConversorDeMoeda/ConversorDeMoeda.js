@@ -2,6 +2,7 @@ import { StyleSheet, View, TextInput, Text } from "react-native";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 const ConversorDeMoeda = () => {
+    
     return (
         <View style={estilos.container}>
             <View style={{

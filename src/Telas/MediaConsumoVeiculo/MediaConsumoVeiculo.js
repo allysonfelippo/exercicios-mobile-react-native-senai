@@ -21,13 +21,19 @@ const estilos = StyleSheet.create({
 
 
 const ConsumoVeiculo = () => {
-    const [valorDistancia, setValorDistancia] = React.useState(); 
-    const [valorCombustivel, setValorCombustivel] = React.useState();
-    
-    const CalculaMedia = () => {
-       
-    } 
-    
+    const [valorDistancia, setValorDistancia] = React.useState('');
+    const [valorCombustivel, setValorCombustivel] = React.useState('');
+    const [resultado, setCampoResultado] = React.useState();
+
+    const CalcularMedia = () => {
+        if (valorDistancia && valorCombustivel) {
+            setCampoResultado(valorDistancia / valorCombustivel);
+        }
+        else {
+            alert('Campos obrigatórios faltam serem preenchidos.');
+        }
+    }
+
     return (
         <View style={estilos.container}>
             <View style={
@@ -58,12 +64,12 @@ const ConsumoVeiculo = () => {
                     inputMode="numeric" />
             </View>
             <View style={{ paddingHorizontal: 8, paddingVertical: 16 }}>
-                <Pressable style={homeEstilos.botao1}>
+                <Pressable onPress={CalcularMedia} style={homeEstilos.botao1}>
                     <Text style={{ color: 'white' }}>Calcular</Text>
                 </Pressable>
             </View>
 
-            <Text style={ESTILOS.ESTILO_TEXTO_RESULTADO}>Resultado: </Text>
+            <Text style={ESTILOS.ESTILO_TEXTO_RESULTADO} onChangeText={setCampoResultado}>Resultado: {resultado} </Text>
         </View>
     )
 };
